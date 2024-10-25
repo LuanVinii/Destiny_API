@@ -1,5 +1,6 @@
 Destiny API - API para filtragem de países (Turismo, curiosidades e informações)
 
+
 Descrição do Projeto: 
 É uma API ideal para a recomendação de países com base nas preferências do usuário, 
 contendo informações básicas dos países, como população, capital, moeda, etc.,

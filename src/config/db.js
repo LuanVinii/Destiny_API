@@ -15,16 +15,3 @@ client.connect()
 .catch(err => console.error('Erro ao se conectar com o banco de dados.', err.stack))
 
 module.exports = client;
-/*.then(() => {
-    const consulta = 'SELECT * FROM pais';
-    return client.query(consulta);
-})
-.then(res =>{
-    console.log('Dados: ', res.rows)
-})
-.catch(err => {
-    console.error('Erro ao Executar consulta: ', err.stack);
-})
-.finally(() => {
-    client.end();
-})*/

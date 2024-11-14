@@ -1,5 +1,5 @@
 const Usuario = require('../models/usuario');
-const Autorizacao = require('../services/autorizacao')
+const Autorizacao = require('../services/autorizacao');
 
 class UsuarioController{
     

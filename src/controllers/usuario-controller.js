@@ -65,7 +65,11 @@ class UsuarioController{
         const usuarioId = req.usuarioId
         const {nome, email, senha, pais_reside} = req.body;
         try{
-            const usuarioAtualizado = await  Usuario.atualizar(usuarioId, nome, email, senha, pais_reside)
+            
+            // Será gerado o hash de senha
+            const hashDeSenha  = await Autorizacao.criarHash(senha)
+
+            const usuarioAtualizado = await  Usuario.atualizar(usuarioId, nome, email, hashDeSenha, pais_reside)
             if(!usuarioAtualizado){
                 return res.status(404).json({message: "Usuário não encontrado"})
             }

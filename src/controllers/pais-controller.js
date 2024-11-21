@@ -13,7 +13,7 @@ static async buscarPaises(req, res){
     }
 }
 
-//Metódo para buscar um país específico utilizando a função ObterTodosPaises do modelo pais.js
+//Metódo para buscar um país específico utilizando a função ObterPaisPorId do modelo pais.js
 static async buscarPais(req, res){
     const id = req.params.id;
     try{

@@ -1,12 +1,12 @@
 const Usuario = require('../models/usuario');
-const Pais = require('../models/pais'); // Para validar país de residência
+const Pais = require('../models/pais');
 const { body, validationResult } = require('express-validator');
 
 class VerificacaoUsuario {
 
     // Validação para criar um usuário
     static async validarCadastro(req, res, next) {
-        // Validação de campos obrigatórios e formatos utilizando o express-validator
+        // Validação de campos obrigatórios utilizando o express-validator
         await body('nome').isString().withMessage('Nome deve ser uma string').run(req);
         await body('email').isEmail().withMessage('Email inválido').run(req);
         await body('senha').isLength({ min: 6 }).withMessage('Senha deve ter pelo menos 6 caracteres').run(req);
